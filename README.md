@@ -7,4 +7,9 @@
 * Once the input is finished, click the equals button, "=", and the calculator will display the final answer. 
 To calculate another expression, simply click 'C'. 
 
+# This code implements:
+* A simple Graphical User Interface (GUI)
+* Arrays
+* A stack data structure
+
 **Hope this helps!**
