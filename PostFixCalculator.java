@@ -24,7 +24,7 @@ public class PostFixCalculator extends JFrame implements ActionListener
 		PostFixCalculator obj = new PostFixCalculator();
 		obj.setVisible(true);
 	}
-	public PostFixCalculator()
+	public PostFixCalculator() //Setting up the GUI
 	{
 		super("Post-fix Calculator");
 		setSize(300, 300);
@@ -69,7 +69,7 @@ public class PostFixCalculator extends JFrame implements ActionListener
 			}
 		add(eastCanvas, BorderLayout.EAST);
 	}
-	public void actionPerformed(ActionEvent e) 
+	public void actionPerformed(ActionEvent e)  //pairing each button to actions
 	{
 		String select = e.getActionCommand();
 		if(select.equals("Enter"))
@@ -164,7 +164,6 @@ public class PostFixCalculator extends JFrame implements ActionListener
 			{
 				number.setText("Expression not solvable!!!!");
 			}
-			//for(int i=0; i<17;i++){ button[i].setEnabled(false);}
 			button[11].setEnabled(false);
 			button[16].setEnabled(false);
 			stringy.setEnabled(false);
@@ -175,13 +174,12 @@ public class PostFixCalculator extends JFrame implements ActionListener
 			line = "";
 			stringy.setText(message);
 			counter=0;
-			//for(int i=0; i<17;i++){button[i].setEnabled(true)}
 			button[11].setEnabled(true);
 			button[16].setEnabled(true);
 			stringy.setEnabled(true);
 		}
 	}
-	public static void solve()
+	public static void solve() //Solves the input expression by using the stack
 	{
 		String[] array = new String[line.length()];
 		for(int i=0; i<line.length();i++)
